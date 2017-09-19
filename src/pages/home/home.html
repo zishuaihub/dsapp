@@ -1,17 +1,78 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
+
+    <ion-navbar>
+      <ion-buttons start>
+        <button ion-button >
+           合肥
+        </button>
+      </ion-buttons>
+
+    <ion-searchbar class="searchbar" placeholder="搜索一下，你就知道"
+      [(ngModel)]="myInput"
+      (ionInput)="onInput($event)"
+      (ionCancel)="onCancel($event)">
+    </ion-searchbar>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="setCityPickerData()">
+        <ion-icon name="chatboxes" ></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content>
+  <ion-slides autoplay="3000" loop=true pager=true *ngIf="ajaxData.ad?.length > 1">
+    <ion-slide *ngFor="let slide of ajaxData.ad">
+      <a href="javascript:void(0);" (click)="openNav(slide.link_url,slide.img)"><img src="{{slide.img}}" alt=""></a>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-grid>
+    <ion-row class="nav1">
+      <ion-col col-4>
+        <a href="javascript:void(0);" (click)="openMenuPage('付款')"><img src="../../assets/images/indexfukuan@2x.png" alt=""></a>
+        <span><a href="javascript:void(0);" (click)="openMenuPage('付款')">付款</a></span>
+      </ion-col>
+      <ion-col col-4>
+        <a href="javascript:void(0);" (click)="openMenuPage('今日特惠')"><img src="../../assets/images/indexjinritehui@2x.png" alt=""></a>
+        <span><a href="javascript:void(0); " (click)="openMenuPage('今日特惠')">今日特惠</a></span>
+      </ion-col>
+      <ion-col col-4>
+        <a href="javascript:void(0);" (click)="openMenuPage('赚钱')"><img src="../../assets/images/indexzhuanqian@2x.png" alt=""></a>
+        <span><a href="javascript:void(0);" (click)="openMenuPage('赚钱')">赚钱</a></span>
+      </ion-col>
+    </ion-row>
+    <ion-row class="nav2">
+      <ion-col col-3 *ngFor="let cate of ajaxData.category" (click)="openCategory(cate.name)">
+        <a href="javascript:void(0);"><img src="{{cate.img}}" alt=""></a>
+        <span><a href="javascript:void(0);">{{cate.name}}</a></span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+<div class="title_jx">
+  精选店铺
+</div>
+  <ion-card *ngFor="let items of ajaxData.supplier" (click)="openGoodsitems(items.name,items.address)" >
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="{{items.logo}}">
+      </ion-avatar>
+      <h2>{{items.name}}</h2>
+       <p class="all">
+          <span [class.selected]="items.score>=1">★</span>
+          <span [class.selected]="items.score>=2">★</span>
+          <span [class.selected]="items.score>=3">★</span>
+          <span [class.selected]="items.score>=4">★</span>
+          <span [class.selected]="items.score>=5">★</span>
+         <span>{{items.score}}分</span>
+         <span class="discount">立返 <b>{{items.discount}}</b> %</span>
+       </p>
+      <p>{{items.address}} {{items.distance}}</p>
+      <p>{{items.distance}}</p>
+    </ion-item>
+
+  </ion-card>
+
+
+
 </ion-content>

@@ -1,3 +1,101 @@
 page-home {
 
+  ion-header{
+    position: fixed !important;
+  }
+  ion-slides{
+    width: 100%;
+    height:auto;
+  }
+  //顶部透明
+  .scroll-content{
+    margin-top: 0 !important;
+  }
+
+  .toolbar-background{
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: none !important;
+
+  }
+  //banner下导航
+  .title_jx{
+    color: #0e0e0e;
+    text-align: center;
+    font-family: "Microsoft YaHei";
+    font-size: 16px;
+    border-top:1px solid #d2d2d2;
+    border-bottom:1px solid #d2d2d2 ;
+    height: 40px;
+    line-height: 40px;
+  }
+  ion-card{
+
+  }
+  .grid{
+    padding: 0;
+  }
+  ion-row{
+    padding: 15px 5px;
+  }
+  .nav1{
+    text-align: center;
+    border-bottom: 1px solid #d1d1d1;
+  }
+  .nav1 span{
+    display: block;
+    font-size: 24px;
+    font-weight: bolder;
+    font-style: italic;
+    color: black;
+    font-family: Microsoft YaHei;
+    margin-left: -10px;
+  }
+  .nav1 span a{
+    color: black;
+    text-decoration-line: none;
+  }
+  .nav1 img{
+    width: 50%;
+  }
+  //分类列表
+  .nav2{
+    text-align: center;
+  }
+  .nav2 img{
+    width: 50%;
+  }
+  .nav2 span{
+    display: block;
+    font-size: 16px;
+    font-family: Microsoft YaHei;
+    margin: 10px auto;
+  }
+  .nav2 span a{
+    color: #585858;
+    text-decoration-line: none;
+  }
+  //商户信息
+  .selected{
+    color: gold;
+  }
+  .all{
+
+
+  }
+  .discount{
+    float: right;
+    color: #ff4848;
+    position: absolute;
+    right: 5%;
+    top: 33%;
+  }
+  .discount b{
+    font-weight: normal;
+    font-size: 18px;
+  }
+  ion-avatar img{
+    width: 70px !important;
+    height: 70px !important;
+    border-radius: 0 !important;
+  }
 }
