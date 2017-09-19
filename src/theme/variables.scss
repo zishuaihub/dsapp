@@ -79,6 +79,93 @@ $colors: (
 // http://ionicframework.com/docs/ionicons/
 
 @import "ionic.ionicons";
+//自定义icon
+.ion-ios-my-xl:before { content: url("../assets/images/dianpujie-@2x.png"); width: 30px;
+  height: 30px;
+  display: block;}
+
+.ion-ios-my-xl-outline:before { content: url("../assets/images/huidianpujie@2x.png");width: 30px;
+  height: 30px;
+  display: block; }
+
+.tab-button[aria-selected=true] .ion-md-my-xl:before { content: url("../assets/images/dianpujie-@2x.png"); width: 30px;
+  height: 30px;
+  display: block;}
+
+.tab-button[aria-selected=false] .ion-md-my-xl:before { content: url("../assets/images/huidianpujie@2x.png");width: 30px;
+  height: 30px;
+  display: block;}
+
+//shenghuoquan
+
+.ion-ios-my-sh:before { content: url("../assets/images/shenghuoquan@2x.png"); width: 30px;
+  height: 30px;
+  display: block;}
+
+.ion-ios-my-sh-outline:before { content: url("../assets/images/huishenghuoquan@2x.png");width: 30px;
+  height: 30px;
+  display: block; }
+
+.tab-button[aria-selected=true] .ion-md-my-sh:before { content: url("../assets/images/shenghuoquan@2x.png"); width: 30px;
+  height: 30px;
+  display: block;}
+
+.tab-button[aria-selected=false] .ion-md-my-sh:before { content: url("../assets/images/huishenghuoquan@2x.png");width: 30px;
+  height: 30px;
+  display: block;}
+
+//pengyouquan
+
+.ion-ios-my-py:before { content: url("../assets/images/pengyouquan@2x.png"); width: 30px;
+  height: 30px;
+  display: block;}
+
+.ion-ios-my-py-outline:before { content: url("../assets/images/huipengyouquan@2x.png");width: 30px;
+  height: 30px;
+  display: block; }
+
+.tab-button[aria-selected=true] .ion-md-my-py:before { content: url("../assets/images/pengyouquan@2x.png"); width: 30px;
+  height: 30px;
+  display: block;}
+
+.tab-button[aria-selected=false] .ion-md-my-py:before { content: url("../assets/images/huipengyouquan@2x.png");width: 30px;
+  height: 30px;
+  display: block;}
+//shenghuoquan
+
+.ion-ios-my-zq:before { content: url("../assets/images/zhuanqian@2x.png"); width: 30px;
+  height: 30px;
+  display: block;}
+
+.ion-ios-my-zq-outline:before { content: url("../assets/images/huizhuanqian@2x.png");width: 30px;
+  height: 30px;
+  display: block; }
+
+.tab-button[aria-selected=true] .ion-md-my-zq:before { content: url("../assets/images/zhuanqian@2x.png"); width: 30px;
+  height: 30px;
+  display: block;}
+
+.tab-button[aria-selected=false] .ion-md-my-zq:before { content: url("../assets/images/huizhuanqian@2x.png");width: 30px;
+  height: 30px;
+  display: block;}
+
+//shenghuoquan
+
+.ion-ios-my-wd:before { content: url("../assets/images/geren@2x.png"); width: 30px;
+  height: 30px;
+  display: block;}
+
+.ion-ios-my-wd-outline:before { content: url("../assets/images/huigeren@2x.png");width: 30px;
+  height: 30px;
+  display: block; }
+
+.tab-button[aria-selected=true] .ion-md-my-wd:before { content: url("../assets/images/geren@2x.png"); width: 30px;
+  height: 30px;
+  display: block;}
+
+.tab-button[aria-selected=false] .ion-md-my-wd:before { content: url("../assets/images/huigeren@2x.png");width: 30px;
+  height: 30px;
+  display: block;}
 
 
 // Fonts

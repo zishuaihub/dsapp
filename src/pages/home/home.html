@@ -9,7 +9,7 @@
         </ion-searchbar>
 
         <ion-buttons start >
-          <button ion-button (tap)="showAreasSelect()" class="city">
+          <button ion-button (click)="showAreasSelect()" class="city" icon-end>
             <span>{{city}}</span>
             <ion-icon name="arrow-down"></ion-icon>
           </button>
@@ -38,15 +38,15 @@
   <ion-grid>
     <ion-row class="nav1">
       <ion-col col-4>
-        <a href="javascript:void(0);" (click)="openMenuPage('付款')"><img src="../../assets/images/indexfukuan@2x.png" alt=""></a>
+        <a href="javascript:void(0);" (click)="openMenuPage('付款')"><img [src]="'../../assets/images/indexfukuan@2x.png'" alt=""></a>
         <span><a href="javascript:void(0);" (click)="openMenuPage('付款')">付款</a></span>
       </ion-col>
       <ion-col col-4>
-        <a href="javascript:void(0);" (click)="openMenuPage('今日特惠')"><img src="../../assets/images/indexjinritehui@2x.png" alt=""></a>
+        <a href="javascript:void(0);" (click)="openMenuPage('今日特惠')"><img [src]="'../../assets/images/indexjinritehui@2x.png'" alt=""></a>
         <span><a href="javascript:void(0); " (click)="openMenuPage('今日特惠')">今日特惠</a></span>
       </ion-col>
       <ion-col col-4>
-        <a href="javascript:void(0);" (click)="openMenuPage('赚钱')"><img src="../../assets/images/indexzhuanqian@2x.png" alt=""></a>
+        <a href="javascript:void(0);" (click)="openMenuPage('赚钱')"><img [src]="'../../assets/images/indexzhuanqian@2x.png'" alt=""></a>
         <span><a href="javascript:void(0);" (click)="openMenuPage('赚钱')">赚钱</a></span>
       </ion-col>
     </ion-row>
@@ -63,7 +63,7 @@
   <ion-card *ngFor="let items of ajaxData.supplier" (click)="openGoodsitems(items.name,items.address)" >
     <ion-item>
       <ion-avatar item-start>
-        <img src="{{items.logo||'../../assets/images/404.png'}}">
+        <img [src]="items.logo||'../../assets/images/404.png'">
       </ion-avatar>
       <h2>{{items.name}}</h2>
        <p class="all">

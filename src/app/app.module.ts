@@ -19,6 +19,7 @@ import {NavPage} from "../pages/nav/nav";
 import {CategoryPage} from "../pages/category/category";
 import {GoodsitemsPage} from "../pages/goodsitems/goodsitems";
 import {MenuPage} from "../pages/menu/menu";
+import {AreasSelectPage} from "../pages/areas-select/areas-select";
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import {MenuPage} from "../pages/menu/menu";
     CategoryPage,
     GoodsitemsPage,
     MenuPage,
+    AreasSelectPage
   ],
   imports: [
     BrowserModule,
@@ -55,6 +57,7 @@ import {MenuPage} from "../pages/menu/menu";
     CategoryPage,
     GoodsitemsPage,
     MenuPage,
+    AreasSelectPage
   ],
   providers: [
     StatusBar,
