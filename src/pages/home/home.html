@@ -1,23 +1,31 @@
 <ion-header>
 
-    <ion-navbar>
-      <ion-buttons start>
-        <button ion-button >
-           合肥
-        </button>
-      </ion-buttons>
+      <ion-toolbar>
 
-    <ion-searchbar class="searchbar" placeholder="搜索一下，你就知道"
-      [(ngModel)]="myInput"
-      (ionInput)="onInput($event)"
-      (ionCancel)="onCancel($event)">
-    </ion-searchbar>
-    <ion-buttons end>
-      <button ion-button icon-only (click)="setCityPickerData()">
-        <ion-icon name="chatboxes" ></ion-icon>
-      </button>
-    </ion-buttons>
-  </ion-navbar>
+        <ion-searchbar  class="searchbar" placeholder="搜索一下你就知道"
+                        [(ngModel)]="myInput"
+                        (ionInput)="onInput($event)"
+                        (ionCancel)="onCancel($event)">
+        </ion-searchbar>
+
+        <ion-buttons start >
+          <button ion-button (tap)="showAreasSelect()" class="city">
+            <span>{{city}}</span>
+            <ion-icon name="arrow-down"></ion-icon>
+          </button>
+        </ion-buttons>
+
+
+
+        <ion-buttons end>
+          <button ion-button icon-only (click)="openMassage()">
+            <ion-icon name="chatboxes" ></ion-icon>
+          </button>
+        </ion-buttons>
+
+      </ion-toolbar>
+
+
 </ion-header>
 
 <ion-content>
@@ -55,7 +63,7 @@
   <ion-card *ngFor="let items of ajaxData.supplier" (click)="openGoodsitems(items.name,items.address)" >
     <ion-item>
       <ion-avatar item-start>
-        <img src="{{items.logo}}">
+        <img src="{{items.logo||'../../assets/images/404.png'}}">
       </ion-avatar>
       <h2>{{items.name}}</h2>
        <p class="all">
@@ -74,5 +82,5 @@
   </ion-card>
 
 
-
+  <page-areas-select #areasSelect [level]="3" (cancel)="closeSelect()" (done)="done($event)"></page-areas-select>
 </ion-content>
